@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/screen.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script src="script/dataHandler.js"></script>
+    <script src="script/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+    <header class="o-row o-row--md o-row--header">
+        <div class="o-container">
+            <div class="c-header">
+                <div class="c-header__logo">
+                    <h1 class="c-logo">
+                        <img src="svg/solar-energy.png" alt="Logo" />
+                    </h1>
+                </div>
+                <div class="c-header__nav c-header__nav--main">
+                    <nav class="c-nav">
+                        <ul class="o-list c-nav__list">
+                            <li class="c-nav__item is-selected">
+                                <a href="index.html" class="c-nav__link">Home</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="control.html" class="c-nav__link">Control</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="o-row o-row--lg">
+        <div class="card">
+            <div class="o-container">
+                <h1>Solar</h1>
+                <div class="o-layout o-layout--gutter o-layout--align-center o-layout--justify-space-between">
+                    <div class="o-layout__item u-1-of-3-bp3">
+                        <canvas id="voltageSolar" class="js-chart-nummber5" width="300" height="250"></canvas>
+                    </div>
+                    <div class="o-layout__item u-1-of-3-bp3">
+                        <canvas id="currentSolar" class="js-chart-nummber6" width="300" height="250"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="o-row o-row--lg">
+        <div class="card">
+            <div class="o-container">
+                <h1>Battery</h1>
+                <div class="o-layout o-layout--gutter o-layout--align-center o-layout--justify-space-between">
+                    <div class="o-layout__item u-1-of-3-bp3">
+                        <canvas id="voltageBattery" class="js-chart-nummber7" width="300" height="250"></canvas>
+                    </div>
+                    <div class="o-layout__item u-1-of-3-bp3">
+                        <canvas id="currentBattery" class="js-chart-nummber8" width="300" height="250"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="o-row o-row--lg">
+        <div class="card">
+            <div class="o-container">
+                <h1>Light</h1>
+                <div class="o-layout o-layout--gutter o-layout--align-center o-layout--justify-space-between">
+                    <canvas id="chartLdr1" class="js-multi-Chart" width="300" height="250"></canvas>
+                </div>
+                <p>ldr 1 ldr 2</p>
+                <p>ldr 3 ldr 4</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
